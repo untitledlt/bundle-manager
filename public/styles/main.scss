@@ -1,0 +1,187 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 56px+16px 16px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+  &:hover {
+    color: #333;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 56px;
+  background-color: #ededed;
+
+  .logo {
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 16px;
+    width: 100px;
+    background-color: #c0c0c0;
+    text-align: center;
+    padding-top: 14px;
+    color: #dfdfdf;
+  }
+
+  .heading {
+    position: absolute;
+    font-size: 18px;
+    right: 0;
+    bottom: 20px;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+.content-wrap {
+  display: table;
+  table-layout: fixed;
+
+  > div {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  .column-menu {
+    width: 300px;
+    padding-right: 16px;
+
+    ul {
+      display: table;
+      table-layout: fixed;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      list-style: none;
+      border: 1px solid #dfdfdf;
+
+      li {
+        display: table-row;
+
+        a {
+          display: table-cell;
+          vertical-align: middle;
+          padding: 8px;
+          height: 32px;
+
+          &:hover, &:active {
+            background-color: #dfdfdf;
+          }
+
+        }
+
+        &:not(:last-child) a {
+          border-bottom: 1px solid #dfdfdf;
+        }
+      }
+    }
+  }
+
+  .column-content {
+    .product-block {
+      padding: 16px;
+      border: 1px solid #dfdfdf;
+
+      h2 {
+        padding: 0 0 16px 0;
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 56px;
+  background-color: #dfdfdf;
+
+  .copyright-notice {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    left: 0;
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 960px) {
+
+  body {
+    padding: 32px+8px 16px;
+  }
+
+  header {
+    height: 32px;
+
+    .logo {
+      padding: 0;
+    }
+    .heading {
+      text-align: left;
+      bottom: 5px;
+      left: 16px+100px+16px;
+    }
+  }
+
+  .content-wrap {
+    .column-menu {
+      display: none;
+    }
+
+    .column-content {
+      .product-block {
+        border: none;
+        padding: 0;
+        h2 {
+          padding-bottom: 8px;
+        }
+      }
+    }
+  }
+
+  footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 32px;
+    background-color: #999;
+
+    .copyright-notice {
+      bottom: 4px;
+    }
+  }
+}

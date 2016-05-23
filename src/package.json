@@ -1,0 +1,16 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "Module for suggesting best bundle",
+  "main": "app.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine": "^2.4.1",
+    "jasmine-node": "^2.0.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/jasmine-node spec --verbose"
+  },
+  "author": "Arnaldas Augutis",
+  "license": "ISC"
+}
